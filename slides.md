@@ -2,10 +2,8 @@
 theme: default
 title: Python でファクトリメソッド
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## 「Python でファクトリメソッド」
+  Slides for 東葛.dev LT (2024.08.03)
 class: text-right
 highlighter: shiki
 drawings:
@@ -286,6 +284,7 @@ level: 2
 ---
 transition: slide-up
 layout: two-cols
+layoutClass: gap-4
 ---
 
 # Python での例
@@ -511,6 +510,56 @@ level: 2
 # ファクトリメソッドのあんまりよくないところ
 
 <div v-click>使わない場合に比べてコードが<span v-mark.blue="{ at: 2 }">複雑</span>(難解)になる</div>
+
+---
+transition: slide-up
+level: 2
+layout: two-cols
+layoutClass: gap-16
+---
+
+# 補うために
+
+<v-clicks>
+
+- ドキュメントを作成
+- ペアプロ
+
+</v-clicks>
+
+<br />
+
+<div v-click>ドキュメントレビューで一人叩き台開発でも無理やり<span v-mark.yellow>メンバーを巻き込む</span></div>
+
+::right::
+
+```md{hide|all}{lines:true}
+# chat-app
+
+## 基本設計方針
+
+利用する外部APIがまだ決まっていないのでファクトリメソッドによる設計。
+抽象クラス(インタフェース)を各サービスの外部APIを用いて実装したファイルをファクトリに登録
+呼び出し元でどのサービスを利用するかを決める。
+
+## ディレクトリ構成
+
+`tree.txt` を参照
+
+### `services` ディレクトリ
+
+ビジネスロジックなどを担う
+
+- `chat`
+
+  - AI チャットサービス(Open AIなど)を利用したチャット生成
+  - ChatGPT が苦手な最新情報(天気情報など)の取得を別の外部サービスで補う
+
+- `geocoding`
+
+  - ジオコーディング処理を担う
+  - あくまでも関数としてのふるまいまでにとどめる
+```
 
 ---
 transition: slide-left
