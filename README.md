@@ -1,3 +1,7 @@
+# Slides here
+https://kosuke222naito.github.io/20240803-lt/
+
+
 # Welcome to [Slidev](https://github.com/slidevjs/slidev)!
 
 To start the slide show:
