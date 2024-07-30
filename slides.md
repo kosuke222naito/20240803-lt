@@ -50,7 +50,7 @@ onMounted(() => {
 
 <style>
 h1 span {
-  background: -webkit-linear-gradient(315deg, #FFD343 50%, #3776AB);
+  background: linear-gradient(315deg, #FFD343, #3776AB);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -64,7 +64,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ---
 layout: two-cols
 layoutClass: gap-16
-title: ToC
+title: Table of Contents
 transition: view-transition
 ---
 
@@ -88,6 +88,8 @@ transition: view-transition
   </li>
 </ul>
 
+<carbon-logo-python v-drag="[702,382,100,100]"/>
+
 ::right::
 
 <h1>
@@ -95,6 +97,15 @@ transition: view-transition
 </h1>
 
 <Toc minDepth="1" maxDepth="1"></Toc>
+
+<style>
+h1 span {
+  background: linear-gradient(315deg, #FFD343, #3776AB);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
 
 ---
 transition: slide-left
@@ -321,17 +332,17 @@ class Cat(Animal):
 ```python{none|26-34|37,38}{lines:true, startLine:26}
 class AnimalFactory:
     @staticmethod
-    def create_animal(animal_type, name):
+    def create(animal_type, name):
         if animal_type == "dog":
             return Dog(name)
         elif animal_type == "cat":
             return Cat(name)
         else:
-            raise ValueError("Unknown animal type")
+            raise ValueError("Unknown type")
 
 
-dog = AnimalFactory.create_animal("dog", "Buddy")
-cat = AnimalFactory.create_animal("cat", "Whiskers")
+dog = AnimalFactory.create("dog", "Buddy")
+cat = AnimalFactory.create("cat", "Whiskers")
 
 print(dog.speak())  # "Woof!"
 print(cat.speak())  # "Meow!"
@@ -572,7 +583,7 @@ transition: slide-left
 - 😇 過剰だったかもしれない
 - 📕 ドキュメントの作成を丁寧に行う必要があった
 - 🙋‍♂️ この作りにしたおかげで他メンバーへの引き継ぎスムーズにできた
-- 🤔 ファクトリクラスのコードの理解が足りてない
+- 🤔 コンストラクタで異なる引数を受け取る場合
 - 🤫 Python の理解も足りてない
 
 </v-clicks>
@@ -583,9 +594,8 @@ transition: slide-left
 
 # まとめ
 
-- ファクトリメソッド: オブジェクトの作成を専門に行うメソッドのこと
+- ファクトリメソッド: オブジェクトの生成をサブクラスに追い出し、クラスの再利用性を高める
 - ファクトリメソッドを使うべき状況
   - オブジェクトの生成方法が複雑な場合
-  - 複数の型のオブジェクトを生成する必要がある場合
   - 生成するオブジェクトの種類が増減する可能性がある場合
   - 生成ロジックをカプセル化したい場合
