@@ -88,7 +88,7 @@ transition: view-transition
   </li>
 </ul>
 
-<carbon-logo-python v-drag="[702,382,100,100]"/>
+<carbon-logo-python v-drag="[356,246,97,100]"/>
 
 ::right::
 
@@ -349,6 +349,11 @@ print(cat.speak())  # "Meow!"
 ```
 
 ---
+layout: image
+image: https://cover.sli.dev
+---
+
+---
 transition: slide-left
 ---
 
@@ -571,6 +576,11 @@ layoutClass: gap-16
   - ジオコーディング処理を担う
   - あくまでも関数としてのふるまいまでにとどめる
 ```
+
+---
+layout: image
+image: https://cover.sli.dev
+---
 
 ---
 transition: slide-left
