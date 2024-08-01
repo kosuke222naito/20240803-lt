@@ -248,7 +248,7 @@ level: 2
 <br />
 <br />
 
-<span v-mark>クラス図</span>
+<span v-click>クラス図</span>
 
 <v-after>
 
@@ -278,6 +278,14 @@ classDiagram
 ```
 
 </v-after>
+
+<twemoji-melting-face
+  absolute
+  text-5xl
+  right-10
+  bottom-10
+  v-click
+/>
 
 ---
 transition: slide-up
