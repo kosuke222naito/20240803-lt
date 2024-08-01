@@ -584,6 +584,14 @@ level: 2
 
 <div v-click>使わない場合に比べてコードが<span v-mark.blue="{ at: 2 }">複雑</span>(難解)になる</div>
 
+<twemoji-loudly-crying-face
+  absolute
+  text-5xl
+  right-10
+  bottom-10
+  v-click="2"
+/>
+
 ---
 transition: slide-up
 level: 2
@@ -602,7 +610,7 @@ layoutClass: gap-16
 
 <br />
 
-<div v-click>ドキュメントレビューで<span v-mark.yellow>メンバーを巻き込む</span></div>
+<div v-click>ドキュメントレビューで<span v-mark.yellow="{ at: 4 }">メンバーを巻き込む</span></div>
 
 ::right::
 
@@ -633,6 +641,14 @@ layoutClass: gap-16
   - ジオコーディング処理を担う
   - あくまでも関数としてのふるまいまでにとどめる
 ```
+
+<twemoji-handshake
+  absolute
+  text-5xl
+  left-10
+  bottom-10
+  v-click="4"
+/>
 
 ---
 layout: image
@@ -666,3 +682,10 @@ transition: slide-left
   - オブジェクトの生成方法が複雑な場合
   - 生成するオブジェクトの種類が増減する可能性がある場合
   - 生成ロジックをカプセル化したい場合
+
+<img
+  src="/images/green_heart.png"
+  absolute
+  right-10
+  bottom-10
+/>
