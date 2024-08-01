@@ -62,6 +62,32 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
+title: slide-link
+level: 2
+---
+
+# このスライドはこちらで
+
+<div
+  mt-10
+  flex="~ col"
+  gap-16
+  justify-center
+  items-center
+>
+  <input v-model="text" type="text" w-full/>
+  <img :src="qrcode" alt="QR Code" w-64/>
+</div>
+
+<script setup>
+import { ref } from "vue";
+import { useQRCode } from "@vueuse/integrations/useQRCode";
+
+const text = ref("https://kosuke222naito.github.io/20240803-lt/");
+const qrcode = useQRCode(text);
+</script>
+
+---
 layout: two-cols
 layoutClass: gap-16
 title: Table of Contents
@@ -88,7 +114,7 @@ transition: view-transition
   </li>
 </ul>
 
-<carbon-logo-python v-drag="[356,246,97,100]"/>
+<carbon-logo-python v-drag="[275,354,97,100]"/>
 
 ::right::
 
@@ -225,7 +251,14 @@ layout: cover
 class: text-center
 ---
 
-# ファクトリメソッド について
+# ファクトリメソッド
+
+<style>
+div {
+  color: black;
+  background-color: white;
+}
+</style>
 
 ---
 transition: slide-up
@@ -299,6 +332,14 @@ level: 2
   <li v-click><span v-mark.circle.yellow="{ at: 4 }">変更の容易さ</span></li>
   <li v-click>可読性の向上</li>
 </ol>
+
+<twemoji-light-bulb
+  absolute
+  text-5xl
+  right-10
+  bottom-10
+  v-click
+/>
 
 ---
 transition: slide-up
@@ -380,6 +421,14 @@ transition: slide-left
 
 <div v-click>そこで利用するサービスに依存せず</div>
 <div v-after><span v-mark.blue>コードの変更を簡単にしたい</span></div>
+
+<twemoji-clapping-hands
+  absolute
+  text-5xl
+  right-10
+  bottom-10
+  v-after
+/>
 
 ---
 transition: view-transition
@@ -487,7 +536,7 @@ level: 2
 
 # これがやりたかった
 
-```python{none|2|3|4}{lines:true}
+```python{none|1|2|3|4}{lines:true}
 ChatBotFactory.register(ChatBotServices.OPENAI)(OpenAIChatBot)
 ChatBotFactory.register(ChatBotServices.CLAUDE)(ClaudeChatBot)
 ChatBotFactory.register(ChatBotServices.GOOGLE_GEMINI)(GoogleGeminiChatBot)
@@ -553,7 +602,7 @@ layoutClass: gap-16
 
 <br />
 
-<div v-click>ドキュメントレビューで一人叩き台開発でも無理やり<span v-mark.yellow>メンバーを巻き込む</span></div>
+<div v-click>ドキュメントレビューで<span v-mark.yellow>メンバーを巻き込む</span></div>
 
 ::right::
 
