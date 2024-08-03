@@ -527,7 +527,7 @@ level: 2
 デコレータとして
 
 ````md magic-move
-```python{all}{lines:true}
+```
 from openai import OpenAI
 
 class OpenAIChatBot(ChatBot):
@@ -544,7 +544,7 @@ class OpenAIChatBot(ChatBot):
         return content
 ```
 
-```python{all}{lines:true}
+```python
 from openai import OpenAI
 
 @ChatBotFactory.register(ChatBotServices.OPENAI)
