@@ -1,8 +1,8 @@
 ---
 theme: default
-title: Python でファクトリメソッド
+title: Python でファクトリメソッド？
 info: |
-  ## 「Python でファクトリメソッド」
+  ## 「Python でファクトリメソッド？」
   Slides for 東葛.dev LT (2024.08.03)
 class: text-right
 highlighter: shiki
@@ -15,7 +15,7 @@ fonts:
   mono: "Fira Code"
 ---
 
-<h1><span>Python でファクトリメソッド</span></h1>
+<h1><span>Python でファクトリメソッド？</span></h1>
 
 <div>ナイトウ <a href="https://twitter.com/engineer_naito"><carbon-logo-twitter /></a></div>
 
@@ -718,6 +718,7 @@ transition: slide-left
 - 🙋‍♂️ この作りにしたおかげで他メンバーへの引き継ぎスムーズにできた
 - 🤔 コンストラクタで異なる引数を受け取る場合
 - 🤫 Python の理解も足りてない
+- 😵‍💫 果たしてこれは本当にファクトリメソッドだったのか
 
 </v-clicks>
 
