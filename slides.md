@@ -527,7 +527,7 @@ level: 2
 デコレータとして
 
 ````md magic-move
-```
+```python
 from openai import OpenAI
 
 class OpenAIChatBot(ChatBot):
