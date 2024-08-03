@@ -441,7 +441,7 @@ transition: view-transition
 インターフェース(抽象基底クラス)の定義
 
 ```python{all|4-7|10,11}{lines:true}
-from abc import ABC, abstractmthod
+from abc import ABC, abstractmethod
 from enum import Enum
 
 class ChatBot(ABC):
