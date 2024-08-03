@@ -516,6 +516,54 @@ ChatBotFactory.register(ChatBotServices.OPENAI)(OpenAIChatBot)
 https://zenn.dev/miyaji26/articles/fe4a50319ed799
 
 ---
+transition: view-transition
+level: 2
+---
+
+# 実際の使用例(チャットbot)
+
+<br />
+
+デコレータとして
+
+````md magic-move
+```python{all}{lines:true}
+from openai import OpenAI
+
+class OpenAIChatBot(ChatBot):
+    def __init__(self):
+        self.chatgpt_client = OpenAI(api_key=OPEN_AI_API_KEY)
+
+    def genrerate_response(self, messages) -> str:
+        completion = self.chatgpt_client.chat.completions.create(
+            messages=messages,
+            model="gpt-4o",
+        )
+        content = completion.choices[0].message.content
+
+        return content
+```
+
+```python{all}{lines:true}
+
+from openai import OpenAI
+@ChatBotFactory.register(ChatBotServices.OPENAI)
+class OpenAIChatBot(ChatBot):
+    def __init__(self):
+        self.chatgpt_client = OpenAI(api_key=OPEN_AI_API_KEY)
+
+    def genrerate_response(self, messages) -> str:
+        completion = self.chatgpt_client.chat.completions.create(
+            messages=messages,
+            model="gpt-4o",
+        )
+        content = completion.choices[0].message.content
+
+        return content
+```
+````
+
+---
 transition: slide-left
 level: 2
 ---
