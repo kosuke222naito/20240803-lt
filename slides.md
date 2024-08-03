@@ -513,6 +513,8 @@ class ChatBotFactory:
 ChatBotFactory.register(ChatBotServices.OPENAI)(OpenAIChatBot)
 ```
 
+https://zenn.dev/miyaji26/articles/fe4a50319ed799
+
 ---
 transition: slide-left
 level: 2
