@@ -545,8 +545,8 @@ class OpenAIChatBot(ChatBot):
 ```
 
 ```python{all}{lines:true}
-
 from openai import OpenAI
+
 @ChatBotFactory.register(ChatBotServices.OPENAI)
 class OpenAIChatBot(ChatBot):
     def __init__(self):
